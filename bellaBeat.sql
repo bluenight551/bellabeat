@@ -71,5 +71,33 @@ CREATE TABLE weight_info(
 	manual_report BOOLEAN,
 	log_id VARCHAR(30));
 
+-- copy data from csv files to psql tables
+COPY daily_activity
+FROM '...\dailyActivity_merged.csv'
+DELIMITER ','
+CSV HEADER;
 
--- 
+COPY daily_activity
+FROM '...\dailyCalories_merged.csv'
+DELIMITER ','
+CSV HEADER;
+
+COPY daily_activity
+FROM '...\dailyIntensities_merged.csv'
+DELIMITER ','
+CSV HEADER;
+
+COPY daily_activity
+FROM '...\dailySteps_merged.csv'
+DELIMITER ','
+CSV HEADER;
+
+COPY daily_activity
+FROM '...\sleepDay_merged.csv'
+DELIMITER ','
+CSV HEADER;
+
+COPY daily_activity
+FROM '...\weightLoginfo_merged.csv'
+DELIMITER ','
+CSV HEADER;
