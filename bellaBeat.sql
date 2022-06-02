@@ -101,3 +101,4 @@ COPY daily_activity
 FROM '...\weightLoginfo_merged.csv'
 DELIMITER ','
 CSV HEADER;
+
